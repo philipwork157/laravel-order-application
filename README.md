@@ -13,10 +13,13 @@ Note: make sure you have enabled 'engine' => 'InnoDB' in the config/database.php
 After you added the database connection details run the following commands to get started:
 
 ##Create the tables
+
 ``php artisan migrate``
 
 ##Add data to the tables
+
 ``php artisan db:seed``
 
 ##Start the Server to access the application
+
 ``php artisan serve``
