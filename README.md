@@ -11,8 +11,10 @@ I have added a Queue to process the Orders.
 
 There is 1 API '/api/orders'. This API will create a new order and add it to the queue. If you run the Laravel worker command this order will be processed and added to the orders table.
 
-Make sure to add Database connection details in the .env file.
-Note: make sure you have enabled 'engine' => 'InnoDB' in the config/database.php file.
+Notes:
+- Make sure to add Database connection details in the .ENV file. 
+- Make sure you have enabled 'engine' => 'InnoDB' in the config/database.php file.
+- Update .ENV file to QUEUE_CONNECTION=database
 
 After you added the database connection details run the following commands to get started:
 
