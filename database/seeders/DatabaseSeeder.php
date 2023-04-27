@@ -30,14 +30,14 @@ class DatabaseSeeder extends Seeder
          * Data tables
          */
         $this->call(UsersSeeder::class);
-        // $this->call(OrdersSeeder::class);
-        // $this->call(AddressSeeder::class);
-        // $this->call(OrderItemsSeeder::class);
-        // $this->call(ShippingLinesSeeder::class);
-        // $this->call(TaxLinesSeeder::class);
-        // $this->call(MetaDataSeeder::class);
-        // $this->call(TaxesSeeder::class);
-        // $this->call(TransactionsSeeder::class);
+        $this->call(OrdersSeeder::class);
+        $this->call(AddressSeeder::class);
+        $this->call(OrderItemsSeeder::class);
+        $this->call(ShippingLinesSeeder::class);
+        $this->call(TaxLinesSeeder::class);
+        $this->call(MetaDataSeeder::class);
+        $this->call(TaxesSeeder::class);
+        $this->call(TransactionsSeeder::class);
 
     }
 }
