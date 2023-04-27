@@ -10,6 +10,14 @@ class Taxe extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        "tax_type_id",
+        "order_id",
+        "order_item_id",
+        "total",
+        "subtotal",
+    ];
+
     public function taxType() : HasOne
     {
         return $this->hasOne(TaxType::class);

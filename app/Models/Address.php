@@ -12,6 +12,22 @@ class Address extends Model
 
     protected $table = 'address';
 
+    protected $fillable = [
+        "order_id",
+        "address_type_id",
+        "first_name",
+        "last_name",
+        "company",
+        "address_1",
+        "address_2",
+        "city",
+        "state",
+        "postcode",
+        "country",
+        "email",
+        "phone",
+    ];
+
     public function addressType() : HasOne
     {
         return $this->hasOne(AddressType::class);

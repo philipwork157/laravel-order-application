@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Jobs\CreatOrderJob;
 use App\Models\Order;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class OrderController extends Controller
 {
@@ -63,5 +65,14 @@ class OrderController extends Controller
     public function destroy(string $id)
     {
         //
+    }
+
+    public function process(Request $request)
+    {
+        Log::info("Queue Order for Processing");
+
+        $orderData = $request->all();
+
+        dispatch(new CreatOrderJob($orderData));
     }
 }

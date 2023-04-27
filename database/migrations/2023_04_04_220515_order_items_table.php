@@ -29,7 +29,7 @@ return new class extends Migration
             $table->float('subtotal');
             $table->float('subtotal_tax');
             $table->float('total');
-            $table->float('total_tax');
+            $table->float('total_tax')->nullable();
             $table->float('price');
             $table->string('sku');
 

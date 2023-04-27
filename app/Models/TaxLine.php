@@ -10,6 +10,16 @@ class TaxLine extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        "rate_code",
+        "rate_id",
+        "order_id",
+        "label",
+        "compound",
+        "tax_total",
+        "shipping_tax_total",
+    ];
+
     public function order() : HasOne
     {
         return $this->hasOne(Order::class);

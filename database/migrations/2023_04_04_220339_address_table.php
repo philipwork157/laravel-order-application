@@ -22,9 +22,9 @@ return new class extends Migration
 
             $table->string('first_name');
             $table->string('last_name');
-            $table->string('company');
+            $table->string('company')->nullable();
             $table->string('address_1');
-            $table->string('address_2');
+            $table->string('address_2')->nullable();
             $table->string('city');
             $table->string('state');
             $table->string('country');

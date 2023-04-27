@@ -11,6 +11,21 @@ class OrderItem extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        "name",
+        "order_id",
+        "product_id",
+        "variation_id",
+        "quantity",
+        "tax_class",
+        "subtotal",
+        "subtotal_tax",
+        "total",
+        "total_tax",
+        "sku",
+        "price"
+    ];
+
     public function order() : HasOne
     {
         return $this->hasOne(Order::class);

@@ -31,7 +31,7 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
 
-            $table->string('user_note');
+            $table->string('user_note')->nullable();
             $table->string('payment_method');
             $table->string('payment_method_title');
             $table->string('date_paid');

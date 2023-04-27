@@ -11,6 +11,14 @@ class ShippingLine extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        "method_title",
+        "order_id",
+        "method_id",
+        "total",
+        "total_tax",
+    ];
+
     public function order() : HasOne
     {
         return $this->hasOne(Order::class);
